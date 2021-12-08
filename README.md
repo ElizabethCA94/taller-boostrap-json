@@ -1,15 +1,11 @@
-Taller-bootstrap incluye:
+Taller-Bootstrap-Json
 
-Imagen como logo
+Integrantes:
 
-Buscador (no necesariamente funcional)
+Maria Camila Martinez
 
-DataTable
+Daniel Santiago Gaviria
 
-Carousel con 4 imagenes, las cuales, deben moverse cada 5000ms
+Elizabeth Carreño Alvarez
 
-Formulario
-
-Iconos
-
-Encabezado y pie de pagina
+Se crea la rama secuendaria Develop donde pueden verse los commit de cada uno de los integrantes.
