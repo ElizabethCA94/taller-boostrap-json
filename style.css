@@ -1,0 +1,191 @@
+/* Se importa de la api de google para colocar fuente sin decoracion en las letras */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+/* A todos los elementos del HTML se le van a aplicar las siguientes propiedades:
+padding: 0 sirve para que no se cree un relleno (espacio alrededor del contenido de un elemento), dentro de los bordes definidos.
+margin: 0 se utilizan para que no se cree un margen (espacio alrededor de los elementos), fuera de los bordes definidos.
+*/
+* {
+  padding:0; 
+  margin:0;  
+}
+
+/* Todos los elementos dentro de la etiqueta body van a tener:
+tipo de fuente Montserrat, 
+un fondo de la imagen llamada fondo-1 y
+un color de texto blanco */
+.contenedor-cuerpo {
+    font-family: "Montserrat";
+    background-image: url(./img/fondo-1.jpg);
+    color: white;
+}
+  
+/*CAROUSEL
+Al elemento p con la clase .parrafo-carrusel, y al div del carousel con el id #carouselExampleControls se le asignan las siguientes propiedades:
+margin: espacio alrededor del carrusel, fuera de los bordes definidos, arriba y abajo de 50px, e izquierda y derecha de auto
+un tamaño maximo de 950px
+align-content: center sirve para alinear el contenido al centro
+*/
+.parrafo-carrusel, #carouselExampleControls {
+    margin: 50px auto;
+    max-width: 950px;
+    align-content: center;
+}
+
+/*DATATABLE
+el div que contiene el dataTable de la clase .contendedor-tabla-banda, la cual va a tener un margin (espacio alrededor de la tabla, fuera de los bordes definidos) de:
+arriba y abajo de auto,  que significa que se adapta al tamaño del elemento e izquierda y derecha de 200px */
+
+.contendedor-tabla-banda {
+  margin: auto 200px;
+}
+
+/*el dataTable tiene un id #tabla-banda la cual va a tener un ancho del 100% de la pagina,
+con un color de texto blanco,
+se le va a aplicar un centrado, es decir, alinear el texto al centro
+opacidad de 0.8*/
+#tabla-banda{
+  width:100%;
+  color: white;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/*se aplica al id #tabla-banda y a su descendiente thead un color de fondo*/
+#tabla-banda thead {
+  background-color: rgba(114, 228, 213, 0.4)
+}
+
+/*se aplica al id #tabla-banda y a su descendiente tfoot un color de fondo*/
+#tabla-banda tfoot {
+  background-color: rgba(114, 228, 213, 0.4)
+}
+
+/*NAV
+la iamgen con la clase logo en el nav tendra un tamaño maximo de 100px, y un margen en la parte de arriba y abajo de 2px y en la parte izquierda y derecha de 10px*/
+.logo {
+    max-width: 100px; 
+    margin: 2px 10px;
+}
+
+
+/*FORMULARIO
+El div con el id #formulario va a tener un margin: espacio en la parte de arriba y abajo de 30px y en la parte izquierda y derecha de auto que significa que se adapta al tamaño del elemento*/
+#formulario{
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+/*El parrafo con la clase .parrafo-formulario va a tener un margin: espacio en la parte de arriba y abajo de 40px y en la parte izquierda y derecha de auto*/
+.parrafo-formulario{
+  margin: 40px auto;
+}
+  
+/*El boton con el id #btn-enviar va a tener un espacio en la parte de arriba y abajo de 20px y en la parte izquierda y derecha de 30px*/
+#btn-enviar{
+  margin: 20px 30px;
+}
+
+/*FOOTER 
+A la clase .footer-dark se le asigna un padding: 50px arriba y abajo y 0 izquierda y derecha (espacio alrededor del contenido de un elemento), dentro de los bordes definidos,
+color de texto blanco, y un fondo gris
+ */
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+/*A la clase .footer-dark y a la descendencia h3 se le va a aplicar un margen superior de 0, para que no se cree un margen (espacio alrededor de los elementos), fuera de los bordes definidos,
+un margen inferior de 12px (espacio alrededor de los elementos), fuera de los bordes definidos,
+un peso de fuente tipo negrita, y un tamaño de fuente de 16px 
+*/
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+/*A la clase .footer-dark y a la descendencia ul se le va a aplicar padding: 0 arriba y abajo y 0 izquierda y derecha (espacio alrededor del contenido de un elemento), dentro de los bordes definidos, 
+se le quita estilos de linea, y se le coloca un interlineado de 1.6px
+un margen inferior de 0, para que no se cree un margen (espacio alrededor de los elementos), fuera de los bordes definidos,
+y una opacidad en el texto de 0,6
+*/
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  margin-bottom:0;
+  opacity:0.6;
+}
+
+/* @media es un condicional, es para cuando estoy en desktop si el ancho es mayor o igual 767px, las siguientes instrucciones se ejecutan, esto se hace para que de cierta forma al disminuir el tamaño de la pantalla pueda ser responsive 
+A la clase .footer-dark y a la descendencia clase .item que no sea clase .social, se le va a aplicar un centrado y un padding: 20px arriba y abajo e izquierda y derecha (espacio alrededor del contenido de un elemento), dentro de los bordes definidos  */
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+/*A la clase .footer-dark y a la descendencia clase .item.text se le va a aplicar un margen inferior de 36px (espacio alrededor de los elementos), fuera de los bordes definidos */
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+/*A la clase .footer-dark y a la descendencia clase .item.text con su desendencia p, se le va a aplicar una opacidad en el texto de 0,6,
+un margen inferior de 0 para que no se cree un margen (espacio alrededor de los elementos), fuera de los bordes definidos  */
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+/*A la clase .footer-dark y a la descendencia clase .item.social, se le va a aplicar un centrado, es decir, alinear el contenido al centro  */
+.footer-dark .item.social {
+  text-align:center;
+}
+
+/*A la clase .footer-dark y a la descendencia clase .item.social y a su hijo a, se le va a aplicar un tamaño de fuente de 20px,
+un ancho de 36px, 
+un alto de 36px, un interlineado de 36px,
+display inline-block permite que el comportamiento de visualizacion del elemento sea en linea pero a su vez sea flexible,en donde se puedan alterar sus dimensiones y llenar espacios disponibles
+un centrado, es decir, alinear el texto al centro 
+un borde redondeado de 50%
+una sombra que contiene los siguientes elementos x, y, difuminacion, borde, color
+un margen de 0 de arriba y abajo y 8px de izquierda y derecha (espacio alrededor de los elementos), fuera de los bordes definidos 
+color del texto blanco
+y opacidad de 0,75 */
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+/*A la clase .footer-dark y a la descendencia clase .item.social y a su hijo a con su pseudo clase :hover(cambio de estado), se le va a aplicar una opacidad de 0,1 */
+.footer-dark .item.social > a:hover {
+  opacity:0.1;
+}
+
+/*A la clase .footer-dark y a la descendencia clase .copyright se le va a aplicar un centrado, es decir, alinear el texto al centro,
+un padding: 24px arriba y abajo e izquierda y derecha (espacio alrededor del contenido de un elemento), dentro de los bordes definidos,
+una opacidad de 0,3
+un tamaño de fuente de 13px
+y un margen inferior de 0 para que no se cree un margen (espacio alrededor de los elementos), fuera de los bordes definidos 
+ */
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
