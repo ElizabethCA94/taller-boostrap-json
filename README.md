@@ -1,15 +1,4 @@
-Taller-bootstrap incluye:
+Taller-bootstrap con json incluye:
 
-Imagen como logo
-
-Buscador (no necesariamente funcional)
-
-DataTable
-
-Carousel con 4 imagenes, las cuales, deben moverse cada 5000ms
-
-Formulario
-
-Iconos
-
-Encabezado y pie de pagina
+Validacion de formulario
+Grafica con datos proveniente de una API en formato JSON
