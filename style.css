@@ -76,9 +76,9 @@ El div con el id #formulario va a tener un margin: espacio en la parte de arriba
   max-width: 600px;
 }
 
-/*El parrafo con la clase .parrafo-formulario va a tener un margin: espacio en la parte de arriba y abajo de 40px y en la parte izquierda y derecha de auto*/
+/*El parrafo con la clase .parrafo-formulario va a tener un margin: espacio en la parte de arriba y abajo de 20px y en la parte izquierda y derecha de auto*/
 .parrafo-formulario{
-  margin: 40px auto;
+  margin: 20px auto;
 }
   
 /*El boton con el id #btn-enviar va a tener un espacio en la parte de arriba y abajo de 20px y en la parte izquierda y derecha de 30px*/
