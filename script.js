@@ -58,24 +58,24 @@ function validacionFormulario(){
 
 /* Grafica con datos proveniente de una API en formato JSON */
 function consumirAPI(){
-    var fecha = [];
+    var mes = [];
     var caldas = [];
     var antioquia = [];
-    var bogota = [];
+    var bogota_dc = [];
     var quindio = [];
 
 
 //consumo de la API
-fetch("https://www.datos.gov.co/resource/8835-5baf.json")
+fetch("https://www.datos.gov.co/resource/ci85-cyhe.json")
     .then(respuesta_exitosa => respuesta_exitosa.json())
     .then(function(datos_obtenidos) {
         datos_obtenidos.forEach(elemento => {
-            if(elemento.fecha != undefined && elemento.caldas != undefined && elemento.antioquia!=undefined && elemento.bogota!=undefined && elemento.quindio!=undefined){
+            if(elemento.mes != undefined && elemento.caldas != undefined && elemento.antioquia!=undefined && elemento.bogota_dc!=undefined && elemento.quindio!=undefined){
                 caldas.push(elemento.caldas);
                 antioquia.push(elemento.antioquia);
-                bogota.push(elemento.bogota);
+                bogota_dc.push(elemento.bogota_dc);
                 quindio.push(elemento.quindio);
-                fecha.push(elemento.fecha);
+                mes.push(elemento.mes);
 
             }
     
@@ -84,28 +84,28 @@ fetch("https://www.datos.gov.co/resource/8835-5baf.json")
         //variables para las graficas
         var graf1 = {
             y: caldas,
-            x: fecha,
+            x: mes,
             name: 'Caldas',
             type: 'bar'
         };
 
         var graf2 = {
             y: antioquia,
-            x: fecha,
+            x: mes,
             name: 'Antioquia',
             type: 'bar'
         };
 
         var graf3 = {
-            y: bogota,
-            x: fecha,
+            y: bogota_dc,
+            x: mes,
             name: 'Bogotá',
             type: 'bar'
         };
 
         var graf4 = {
             y: quindio,
-            x: fecha,
+            x: mes,
             name: 'Quindio',
             type: 'bar'
         };
@@ -115,8 +115,7 @@ fetch("https://www.datos.gov.co/resource/8835-5baf.json")
         var layout = {
             barmode: 'stack',
             title: {
-                text: 'Prueba PCR realizadas en Colombia',
-            
+                text: 'Prueba Antigeno realizadas en Colombia',
             },
         };
 
